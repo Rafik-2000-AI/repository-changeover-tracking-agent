@@ -1,0 +1,41 @@
+.dashboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+.dashboard-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.tracking-status {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.status-active {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+.status-inactive {
+    background-color: #f2dede;
+    color: #a94442;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-header {
+        font-size: 20px;
+    }
+}

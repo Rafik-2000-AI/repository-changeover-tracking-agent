@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Tracking Interface</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .tracking-container { display: flex; justify-content: space-around; padding: 20px; }
+        .actor { border: 1px solid #ccc; border-radius: 5px; padding: 10px; width: 45%; }
+        h2 { color: #333; }
+    </style>
+</head>
+<body>
+    <h1>Real-Time Tracking Interface</h1>
+    <div class="tracking-container">
+        <div class="actor" id="regleur">
+            <h2>Regleur</h2>
+            <div id="regleur-status">Status: Waiting for data...</div>
+        </div>
+        <div class="actor" id="operateur">
+            <h2>Operateur</h2>
+            <div id="operateur-status">Status: Waiting for data...</div>
+        </div>
+    </div>
+    <script>
+        function fetchStatus() {
+            // Simulated fetching of tracking data
+            document.getElementById('regleur-status').innerHTML = 'Status: Active (Updated at ' + new Date().toISOString() + ')';
+            document.getElementById('operateur-status').innerHTML = 'Status: Active (Updated at ' + new Date().toISOString() + ')';
+        }
+        setInterval(fetchStatus, 5000); // Update every 5 seconds
+    </script>
+</body>
+</html>
